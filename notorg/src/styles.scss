@@ -1,0 +1,19 @@
+/* You can add global styles to this file, and also import other style files */
+* {
+    font-family: "Titillium Web", serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffeaff;
+    box-sizing: border-box;
+}
+
+.note-corner {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 20px;
+    height: 15px;
+    background: linear-gradient(135deg, #fdf5c0 50%, #f3e9a6 50%);
+    clip-path: polygon(0 0, 0 100%, 100% 100%);
+    box-shadow: -2px -2px 5px rgba(0, 0, 0, 0.1);
+  }

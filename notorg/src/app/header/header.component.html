@@ -1,0 +1,19 @@
+<div class="row d-flex flex-wrap mb-2">
+    <hr>
+    <div class="col-12 col-md-4 col-lg-4">
+        <label class="form-label">Search Notes<i class="px-2 fa-solid fa-magnifying-glass"></i></label>
+        <input class="form-control" placeholder="Type to Search..." [(ngModel)]="searchTerm"
+            (ngModelChange)="searchNotes()" type="text">
+    </div>
+    <div class="col-12 col-md-4 col-lg-4">
+        <label class="form-label">Upload Notes Maker JSON<i class="px-2 fa-solid fa-upload"></i></label><span><button class="btn btn-sm btn-danger" (click)="clearFile(fileInput)" [disabled]="!fileInput?.value">Clear file</button></span>
+        <input class="form-control form-control-md" type="file"
+            (change)="uploadNotes($event)" accept=".json" #fileInput>
+
+    </div>
+    <div class="col-12 col-md-4 col-lg-4 d-flex justify-content-center flex-column">
+        <label class="form-label">Download Notes Maker JSON <i class="px-2 fa-solid fa-cloud-arrow-down"></i></label>
+        <button [disabled]="!notes.length" class="btn btn-outline-light text-dark border border-warning"
+            (click)="downloadNotes()">Download</button>
+    </div>
+</div>

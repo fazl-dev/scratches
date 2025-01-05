@@ -1,0 +1,11 @@
+.note-card {
+    width: 18rem;
+    height:20rem;
+    textarea {
+        resize: none; /* Disable expansion */
+        overflow: auto; /* Enable scrollbars when content overflows */
+    }
+    .form-control.note-title {
+        font-weight: 700;
+    }
+}

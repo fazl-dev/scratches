@@ -1,0 +1,6 @@
+<div class="d-flex flex-wrap">
+    <note-card [noteType]="'BUTTON'" (noteAction)="captureNoteActionAndProceed($event)"></note-card>
+    <ng-container *ngFor="let note of notes; let noteIndex = index">
+        <note-card [noteType]="'STATIC'" [note]="note"  (noteAction)="captureNoteActionAndProceed($event,noteIndex)"></note-card>
+    </ng-container>
+</div>
