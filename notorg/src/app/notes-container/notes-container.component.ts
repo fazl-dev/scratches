@@ -24,7 +24,8 @@ export class NotesContainerComponent implements OnInit {
         this.notes = this.commonService.getNotes();
       } else {
         this.notes = this.commonService.getNotes().filter(note => {
-          return note.title.includes(searchTerm) || note.content.includes(searchTerm);
+
+          return (note.title?.toLowerCase()).includes(searchTerm?.toLowerCase()) || (note.content?.toLowerCase()).includes(searchTerm?.toLowerCase());
         });
 
       }
