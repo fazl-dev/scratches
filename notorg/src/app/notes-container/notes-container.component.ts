@@ -38,6 +38,7 @@ export class NotesContainerComponent implements OnInit {
           const result = JSON.parse(reader.result as string);
           this.notes = result;
           file = null;
+          this.commonService.setNotes(this.notes);
           this.setNotesInSession();
         } catch (e) {
           console.error('Error while reading file', e);
